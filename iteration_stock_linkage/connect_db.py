@@ -2,27 +2,27 @@
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.types import CHAR,Integer,String,VARCHAR,Text
+from sqlalchemy.types import CHAR,Integer,String,VARCHAR
 from contextlib import contextmanager
 
 
 BaseModel=declarative_base()
 
 class SetSupport(BaseModel):
-    __tablename__ = "SetSupport"
+    __tablename__ = "DaySetSupport"
     startdate = Column(DATETIME,primary_key=True)
-    transset = Column(VARCHAR(100), primary_key=True)
+    transset = Column(VARCHAR(255), primary_key=True)
     support  = Column(Integer, index=True, nullable=False)
 
 class Rules(BaseModel):
-    __tablename__ = "Rules"
+    __tablename__ = "DayRules"
     startdate = Column(DATETIME, primary_key=True)
     LHS  = Column(VARCHAR(255), index=True, primary_key=True,nullable=False)
     RHS  = Column(VARCHAR(255), index=True, primary_key=True,nullable=False)
     conf = Column(FLOAT)
 
-class Stock(BaseModel):
-    __tablename__ = "STOCK"
+class StockDay(BaseModel):
+    __tablename__ = "STOCKDAY"
     id = Column(Integer,primary_key=True,autoincrement=True)
     chWindCode = Column(VARCHAR(255))
     chCode = Column(VARCHAR(255))
@@ -37,6 +37,20 @@ class Stock(BaseModel):
     iMarchItems = Column(VARCHAR(255))
     nIntesest = Column(VARCHAR(255))
     nTrend = Column(VARCHAR(255))
+
+class MinuteSetSupport(BaseModel):
+    __tablename__ = "MinuteSetSupport"
+    startdate = Column(DATETIME,primary_key=True)
+    transset = Column(VARCHAR(100), primary_key=True)
+    support  = Column(Integer, index=True, nullable=False)
+
+
+class MinuteRules(BaseModel):
+    __tablename__ = "MinuteRules"
+    startdate = Column(DATETIME, primary_key=True)
+    LHS  = Column(VARCHAR(255), index=True, primary_key=True,nullable=False)
+    RHS  = Column(VARCHAR(255), index=True, primary_key=True,nullable=False)
+    conf = Column(FLOAT)
 
 engine = create_engine(
             "mysql://root:123456@localhost:3306/platelinkage?charset=utf8")
