@@ -1,9 +1,9 @@
-Ê¹ÓÃ·½·¨£º
+ä½¿ç”¨æ–¹æ³•ï¼š
 
-ÔÚÊı¾İ¿âplatelinkageÏÂµ¼Èëstock±í
+åœ¨æ•°æ®åº“platelinkageä¸‹å¯¼å…¥stockè¡¨
 
-µ÷ÓÃ·½·¨stock_linkageÖĞµÄgenereterulesº¯Êı:
+è°ƒç”¨æ–¹æ³•day_stock_linkagebetaä¸­çš„genereteruleså‡½æ•°:
 genereterules(2015, 10, 8, 2015,  11, 8, '2016-04-27', stock_list, 10, 0.5)
-             (ÆğÊ¼Äê,ÔÂ,ÈÕ,ÖÕÖ¹Äê,ÔÂ,ÈÕ ,×îÖÕÈÕÆÚ   ,  ¹ÉÆ±ÁĞ±í,minsupport,minconf)
+             (èµ·å§‹å¹´,æœˆ,æ—¥,ç»ˆæ­¢å¹´,æœˆ,æ—¥ ,æœ€ç»ˆæ—¥æœŸ   ,  è‚¡ç¥¨åˆ—è¡¨,minsupport,minconf)
 
-ÀúÊ·Ç¿¹ØÁª¹æÔò´æ´¢ÔÚ±ídayrules
+å†å²å¼ºå…³è”è§„åˆ™å­˜å‚¨åœ¨è¡¨dayrules
